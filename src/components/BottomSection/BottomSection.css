@@ -1,0 +1,46 @@
+.bottom-section {
+  display: flex;
+  padding: 6rem var(--mainPaddingX);
+  gap: 3rem;
+}
+
+.bottom-section-col {
+  flex: 1;
+  position: relative;
+}
+
+.bottom-section-title {
+  margin-bottom: 2rem;
+  position: relative;
+  /* border: 2px solid red; */
+}
+
+.club-div {
+  position: relative;
+  display: inline-block;
+}
+
+.circle-svg {
+  position: absolute;
+  top: 0rem;
+  left: -0.5rem;
+}
+
+.tech-logos-img {
+  position: absolute;
+  left: -7rem;
+  bottom: 2rem;
+  z-index: 5;
+}
+
+@media screen and (max-width: 1050px) {
+  .bottom-section {
+    flex-direction: column;
+  }
+
+  .tech-logos-img {
+    left: auto;
+    right: 4rem;
+    bottom: 4rem;
+  }
+}

@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Martian+Mono:wght@100..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --neutraldark: rgb(6, 38, 48);
+  --neutral: rgb(56, 81, 89);
+  --neutralgray: rgb(230, 225, 223);
+  --neutrallightgray: rgb(250, 245, 243);
+  --neutralwhite: rgb(255, 255, 255);
+  --darksalmon: rgb(254, 163, 111);
+  --salmon: rgb(255, 226, 209);
+  --lightsalmon: rgb(255, 245, 239);
+  --text-gradient: linear-gradient(107deg, #ff9a60 -11.37%, #062630 61.84%);
+  --lightsalmongradient: linear-gradient(90deg, #ffe2d1 50%, #fff5ef 100%);
+  /* --lightsalmongradient: linear-gradient(to right, blue, red); */
+  --mainMartianFont: "Martian Mono", serif;
+  --interFont: "Inter", serif;
+  --mainPaddingX: 13.5rem;
+}
+
+/* body {
+  background: var(--salmon);
+} */
+
+.neutral-dark {
+  color: var(--neutraldark);
+}
+
+.neutral-50 {
+  color: var(--neutrallightgray);
+}
+
+.neutral-0 {
+  color: var(--neutralwhite);
+}
+
+.inter {
+  font-family: var(--interFont);
+}
+
+.mainFont {
+  font-family: var(--mainMartianFont);
+}
+
+.thin {
+  font-weight: 200;
+}
+
+.mid-thin {
+  font-weight: 300;
+}
+
+.semi-bold {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 6.2rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 3.4rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+small {
+  font-size: 1.4rem;
+}
+
+.mt-3 {
+  margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 1050px) {
+  :root {
+    --mainPaddingX: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+  h2 {
+    font-size: 3.4rem;
+  }
+}

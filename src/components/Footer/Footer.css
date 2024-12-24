@@ -1,0 +1,131 @@
+.footer {
+  background: var(--neutraldark);
+  position: relative;
+  padding: 0rem 2rem;
+  padding-top: 8rem;
+}
+
+.footer-content {
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  inset: 0;
+  /* border: 2px solid red; */
+}
+
+.footer-card {
+  /* border: 2px solid red; */
+  text-align: center;
+  width: clamp(45%, 500px, 100%);
+  margin-bottom: 2.5rem;
+  /* padding: 0rem 2rem; */
+}
+
+.footer-h2 {
+  padding-bottom: 1.6rem;
+}
+
+.footer-card-body {
+  width: 42rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  /* border: 3px solid green; */
+}
+
+/* .footer-link-btn {
+  border: 2px solid var(--neutralwhite);
+  color: var(--neutralwhite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 2.4rem 0;
+  text-transform: uppercase;
+} */
+
+/* .footer-users-reviews-div {
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.img-avatars {
+  height: 4rem;
+  width: 11rem;
+}
+
+.stars {
+  display: flex;
+} */
+
+.footer-bottom-row {
+  width: 100%;
+  /* height: 50px; */
+  /* position: absolute; */
+  position: relative;
+  bottom: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0rem 13.5rem;
+  /* flex-direction: column; */
+  /* border: 2px solid blue; */
+  /* padding-top: 2rem; */
+}
+
+.footer-bottom-row-content {
+  /* position: absolute; */
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  /* padding-top: 2.5rem; */
+  /* padding-top: 2.4rem; */
+  /* border: 2px solid blue; */
+}
+
+.footer-bottom-borderline {
+  position: relative;
+  /* left: 0; */
+  /* top: 0; */
+  height: 1px;
+  width: 100%;
+  opacity: 45%;
+  background: var(--neutrallightgray);
+  filter: blur(2px);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .footer-bottom-row,
+  .footer-bottom-row-content {
+    /* flex-direction: column; */
+    padding: 0rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footer-bottom-row {
+    /* padding: 2rem 0; */
+  }
+  .footer-bottom-row-content {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+}

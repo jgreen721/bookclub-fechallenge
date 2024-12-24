@@ -1,0 +1,17 @@
+.pattern-overlay {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-img {
+  position: absolute;
+  /* display: none; */
+}
+
+.glow-bg-img {
+  position: absolute;
+  right: -25%;
+  bottom: -25%;
+}

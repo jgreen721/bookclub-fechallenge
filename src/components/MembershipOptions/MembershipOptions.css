@@ -1,0 +1,107 @@
+.memberships-section {
+  text-align: center;
+  padding: 12rem var(--mainPaddingX);
+}
+
+.memberships {
+  display: grid;
+  gap: 2rem;
+  margin-top: 6.4rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.membership-card {
+  flex: 1;
+  border-radius: 0.5rem;
+  border: 4px solid var(--neutralgray);
+  text-align: start;
+  padding: 2rem;
+  transition: 0.25s ease;
+}
+
+.membership-card:hover {
+  transform: scale(0.95, 1.1);
+}
+
+.membership-name {
+  margin-bottom: 2rem;
+}
+
+.membership-features {
+  margin: 1.5rem 0;
+}
+
+.membership-feature-item {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.membership-card-content {
+  position: relative;
+  z-index: 5;
+}
+
+.center-card {
+  background: var(--lightsalmongradient);
+  transform: scaleY(1.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.center-card:hover {
+  transform: scale(0.9, 1.4);
+}
+
+.card-glow-bg-img {
+  position: absolute;
+
+  border: 3px solid red;
+  height: 100%;
+  width: 100%;
+  right: -50%;
+  bottom: -50%;
+  transform: scale(3);
+}
+
+.membership-price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--neutralgray);
+}
+
+.subscribe-btn {
+  padding: 1.5rem 0;
+  width: 100%;
+  border-radius: 0.8rem;
+  border: 2px solid black;
+  text-transform: uppercase;
+  font-family: var(--mainMartianFont);
+  font-weight: 800;
+  font-size: 1.8rem;
+  background: var(--lightsalmon);
+}
+
+@media screen and (max-width: 1050px) {
+  .memberships-section {
+    padding: 8rem var(--mainPaddingX);
+  }
+  .memberships {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .center-card {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 650px) {
+  .memberships-section {
+    padding: 6.4rem var(--mainPaddingX);
+  }
+  .memberships {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
