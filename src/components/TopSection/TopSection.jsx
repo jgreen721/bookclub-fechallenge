@@ -22,7 +22,7 @@ const TopSection = () => {
         <div className="section-column-content">
           <div className="section-title">
           <h2 className="mainFont semi-bold">Read together,</h2>
-          <h2 className="mainFont semi-bold">grow together</h2>
+          <h2 className="mainFont semi-bold"><span className="highlight"><span class="priority">grow</span></span> together</h2>
           </div>
           <div className="section-list-items">
             {stats.map(stat=>(

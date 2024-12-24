@@ -76,6 +76,7 @@
   .header-content-row {
     flex-direction: column;
     height: auto;
+    margin-top: 6.4rem;
   }
 
   .hero-h1-div {
@@ -84,5 +85,11 @@
 
   .hero-img-div {
     min-width: auto;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .header-content-row {
+    margin-top: 4.8rem;
   }
 }

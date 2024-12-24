@@ -44,3 +44,20 @@
     bottom: 4rem;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .bottom-section {
+    padding: 3rem var(--mainPaddingX);
+  }
+  .tech-logos-img {
+    right: 2rem;
+    bottom: -5rem;
+    transform: scale(0.85);
+    opacity: 85%;
+  }
+
+  .circle-svg {
+    top: -1rem;
+    left: -2.5rem;
+  }
+}

@@ -31,6 +31,26 @@
   /* border: 2px solid red; */
 }
 
+.highlight {
+  position: relative;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 110%;
+  height: 30px;
+  background: var(--darksalmon);
+  transform: rotate(-5deg) translateY(0.5rem);
+  filter: blur(2px);
+}
+
+.priority {
+  position: relative;
+  z-index: 5;
+}
+
 .section-list-item {
   display: flex;
   align-items: center;
@@ -41,6 +61,7 @@
 @media screen and (max-width: 1050px) {
   .top-section {
     flex-direction: column;
+    padding: 3rem var(--mainPaddingX);
   }
   .desktop {
     display: none;
@@ -48,5 +69,10 @@
   .mobile {
     display: block;
     /* border: 3px solid red; */
+  }
+
+  .section-img {
+    min-width: auto;
+    min-height: auto;
   }
 }

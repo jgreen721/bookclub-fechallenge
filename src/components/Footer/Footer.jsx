@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="footer-card-body">
   
       <ReviewMembershipBtn dir="up" color="light" hoverClass="footer-btn"/>
-      <DevelopersJoined/>
+      <DevelopersJoined color="light"/>
 
 
     </div>
