@@ -8,7 +8,7 @@ const MembershipOptions = () => {
     {id:3,name:"Enterprise",price:"Custom",label:"",features:[{id:1,title:"Team access"},{id:2,title:"Private sessions"}],btnText:"Talk to us"},
   ]
   return (
-    <div className="memberships-section">
+    <div id="membershipoptions" className="memberships-section">
       <h1 className="memberships-title mainFont">
         Membership options
       </h1>

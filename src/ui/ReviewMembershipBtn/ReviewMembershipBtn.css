@@ -7,18 +7,21 @@
   gap: 1rem;
   border-radius: 1.5rem;
   cursor: pointer;
-  padding: 2.4rem 2rem;
+  padding: 2rem;
   text-transform: uppercase;
   width: fit-content;
   white-space: nowrap;
   overflow: hidden;
   position: relative;
   transition: 0.25s ease;
+  background: var(--lightsalmon);
 }
 
 .membership-btn * {
   z-index: 5;
 }
+
+/*HeroBtn Hover FX */
 
 .hero-btn:hover::before {
   content: "";
@@ -72,6 +75,8 @@
   box-shadow: 0px 2px 1px rgba(15, 15, 15, 1),
     0px 6px 15px rgba(15, 20, 20, 0.5);
 }
+
+/*FooterBtn Hover FX */
 
 .footer-btn:hover::before {
   content: "";

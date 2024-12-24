@@ -5,10 +5,7 @@ import "./Header.css"
 const Header = () => {
   return (
     <header className="header">
-       {/* <div className="pattern-overlay">
-          <img className="bg-img" src={patternLightBg} alt="bg-img" />
-          <img className="glow-bg-img" src={patternGlow} alt="glow-bg-img" />
-        </div> */}
+      
         <GridOverlay/>
       <div className="header-content">
         <div className="header-logo-div">
@@ -42,6 +39,11 @@ const Header = () => {
           <div className="header-content-column">
            <div className="hero-img-div">
            <picture className="hero-img-picture">
+              <source media="(min-width:1050px)" srcSet={imageHeroTablet}/>
+              <source media="(min-width:650px)" srcSet={imageHeroMobile}/>
+              <img className="hero-img" src={imageHeroDesktop} alt="img"/>
+          </picture>
+          <picture className="hero-img-picture-blur">
               <source media="(min-width:1050px)" srcSet={imageHeroTablet}/>
               <source media="(min-width:650px)" srcSet={imageHeroMobile}/>
               <img className="hero-img" src={imageHeroDesktop} alt="img"/>
