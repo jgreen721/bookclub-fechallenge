@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useRef,useEffect} from 'react'
 import { imageReadTogetherMobile,imageReadTogetherTablet, imageReadTogetherDesktop,iconCheck } from '../../const'
+import useObserver from '../../hooks/useObserver'
 import "./TopSection.css"
 
 const TopSection = () => {
@@ -9,9 +10,23 @@ const TopSection = () => {
     {id:3,blurb:"Early access to new tech book releases"},
     {id:4,blurb:"Author Q&A sessions with tech thought leaders"},
   ]
+  const topSectionEl = useRef();
+  const topSectionImgRef = useRef();
+  const topMobileSectionImgRef = useRef();
+  const isVisible = useObserver(topSectionEl);
+
+
+  useEffect(()=>{
+    if(isVisible){
+      console.log('animate stuffs!!')
+      topSectionImgRef.current.classList.add("stretch-grow-el");
+      topMobileSectionImgRef.current.classList.add("stretch-grow-el");
+    }
+  },[isVisible])
+
   return (
-    <div className="top-section">
-      <div className="section-column desktop">
+    <div ref={topSectionEl} className="top-section">
+      <div style={{"--i":".5s"}} ref={topSectionImgRef} className="section-column section-img-column desktop">
       <picture>
         <source media="(min-width:1050px)" srcSet={imageReadTogetherTablet}/>
         <source media="(min-width:550px)" srcSet={imageReadTogetherMobile}/>
@@ -22,7 +37,7 @@ const TopSection = () => {
         <div className="section-column-content">
           <div className="section-title">
           <h2 className="mainFont semi-bold">Read together,</h2>
-          <h2 className="mainFont semi-bold"><span className="highlight"><span class="priority">grow</span></span> together</h2>
+          <h2 className="mainFont semi-bold"><span className="highlight"><span className="priority">grow</span></span> together</h2>
           </div>
           <div className="section-list-items">
             {stats.map(stat=>(
@@ -43,7 +58,7 @@ const TopSection = () => {
       </picture>
       </div> */}
       </div>
-      <div className="mobile-column mobile">
+      <div style={{"--i":".5s"}} ref={topMobileSectionImgRef} className="mobile-column mobile section-img-column">
       <picture>
         <source media="(min-width:1050px)" srcSet={imageReadTogetherTablet}/>
         <source media="(min-width:550px)" srcSet={imageReadTogetherMobile}/>

@@ -42,6 +42,17 @@
 .hero-h1-div {
   display: flex;
   gap: 3rem;
+  background-image: var(--text-gradient);
+  color: transparent;
+  background-clip: text;
+  transform: scaleY(0);
+  animation: inflateletters 1s var(--i) ease forwards;
+}
+
+@keyframes inflateletters {
+  100% {
+    transform: scale(1);
+  }
 }
 
 .hero-img-div {

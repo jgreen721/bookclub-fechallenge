@@ -18,6 +18,10 @@
   justify-content: center;
 }
 
+.section-img-column {
+  transform: scale(0);
+}
+
 .section-img {
   height: 100%;
   width: 100%;
