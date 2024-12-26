@@ -49,7 +49,7 @@
   filter: blur(10px);
   color: var(--darksalmon);
   transform: scaleY(0);
-  animation: inflatevertically 1s var(--i) ease forwards;
+  animation: inflate-vertically 1s var(--i) ease forwards;
 }
 
 .hero-img-div {
