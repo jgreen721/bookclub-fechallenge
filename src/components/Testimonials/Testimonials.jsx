@@ -1,10 +1,20 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import {Stars} from "../../ui"
+import useObserver from '../../hooks/useObserver'
 import "./Testimonials.css"
 
 const Testimonials = () => {
+  const testimonialRef = useRef();
+  const isVisible = useObserver(testimonialRef)
+
+
+  useEffect(()=>{
+    if(isVisible){
+      testimonialRef.current.classList.add("rotate-x-element");
+    }
+  })
   return (
-<div className="testimonial-section">
+<div ref={testimonialRef} className="testimonial-section">
   <Stars />
   <div className="testimonials-quote">
     <div className="testimonial-quote mainFont">

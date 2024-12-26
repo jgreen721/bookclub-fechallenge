@@ -3,6 +3,8 @@
   position: relative;
   padding: 0rem;
   padding-top: 8rem;
+  filter: blur(200px) grayscale(100%);
+  transform: translateY(50vh);
 }
 
 .footer-content {

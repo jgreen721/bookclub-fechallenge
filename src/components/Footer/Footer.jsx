@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import {logoBluesky,logoLinkedin} from "../../const"
 import {ReviewMembershipBtn,DevelopersJoined} from '../../ui'
+import useObserver from '../../hooks/useObserver'
 import "./Footer.css"
 
 const Footer = () => {
@@ -8,8 +9,17 @@ const Footer = () => {
     {id:1,title:"Butterfly",icon:logoBluesky},
     {id:2,title:"LinkedIn",icon:logoLinkedin},
   ]
+  const footerRef = useRef();
+  const isVisible = useObserver(footerRef)
+
+
+  useEffect(()=>{
+    if(isVisible){
+      footerRef.current.classList.add("clear-grey-el")
+    }
+  })
   return (
-<footer className="footer">
+<footer ref={footerRef} className="footer">
   <div className="footer-content">
     <div className="footer-card">
       <div className="footer-h2">

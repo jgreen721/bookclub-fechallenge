@@ -1,20 +1,34 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import { iconCheck,patternGlow } from '../../const'
+import useObserver from '../../hooks/useObserver'
 import "./MembershipOptions.css"
 const MembershipOptions = () => {
   const memberships=[
-    {id:1,name:"Starter",price:"$19",label:"/month",features:[{id:1,title:"1 book/month"},{id:2,title:"Online forums"}],btnText:"Subscribe now"},
-    {id:2,name:"Pro",price:"$29",label:"/month",features:[{id:1,title:"2 books/month"},{id:2,title:"Virtual meetups"}],btnText:"Subscribe now"},
-    {id:3,name:"Enterprise",price:"Custom",label:"",features:[{id:1,title:"Team access"},{id:2,title:"Private sessions"}],btnText:"Talk to us"},
+    {id:1,delay:".5s",name:"Starter",price:"$19",label:"/month",features:[{id:1,title:"1 book/month"},{id:2,title:"Online forums"}],btnText:"Subscribe now"},
+    {id:2,delay:"1.25s",name:"Pro",price:"$29",label:"/month",features:[{id:1,title:"2 books/month"},{id:2,title:"Virtual meetups"}],btnText:"Subscribe now"},
+    {id:3,delay:"2s",name:"Enterprise",price:"Custom",label:"",features:[{id:1,title:"Team access"},{id:2,title:"Private sessions"}],btnText:"Talk to us"},
   ]
+  const membershipRef = useRef();
+  const isVisible = useObserver(membershipRef);
+  const titleRef = useRef();
+  const membershipsRef = useRef();
+
+
+  useEffect(()=>{
+    if(isVisible){
+      titleRef.current.classList.add("drop-el");
+      membershipsRef.current.querySelectorAll(".outside-card").forEach(el=>el.classList.add("stretch-grow-el"));
+      membershipRef.current.querySelector(".center-card").classList.add("clear-blur")
+    }
+  },[isVisible]);
   return (
-    <div id="membershipoptions" className="memberships-section">
-      <h1 className="memberships-title mainFont">
+    <div ref={membershipRef} id="membershipoptions" className="memberships-section">
+      <h1 style={{"--i":".5s"}} ref={titleRef} className="memberships-title mainFont">
         Membership options
       </h1>
-      <ul className="memberships">
+      <ul ref={membershipsRef} className="memberships">
         {memberships.map(membership=>(
-          <li key={membership.id} className={`${membership.id == 2 && 'center-card'} membership-card`}>
+          <li style={{"--i":membership.delay}} key={membership.id} className={`${membership.id == 2 ? 'center-card' : 'outside-card'} membership-card`}>
             {membership.id == 2 && 
             <div className="pattern-overlay">
               <img className="card-glow-bg-img" src={patternGlow} alt="" />
