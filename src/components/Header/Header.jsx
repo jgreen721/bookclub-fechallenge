@@ -16,6 +16,8 @@ const Header = () => {
           <div className="header-content-column">
             <div className="hero-content-card">
               <div className="hero-content-h1-divs mainFont">
+              <h1 style={{"--i":"1.5s"}} className="hero-h1-shadow">ultimate</h1>
+
                 <div style={{"--i":".25s"}} className="hero-h1-div">
                   <h1 className="hero-h1">Join</h1>
                   <h1 className="hero-h1">the</h1>
@@ -48,7 +50,7 @@ const Header = () => {
           <picture className="hero-img-picture-blur">
               <source media="(min-width:1050px)" srcSet={imageHeroTablet}/>
               <source media="(min-width:650px)" srcSet={imageHeroMobile}/>
-              <img className="hero-img stretch-grow-el" src={imageHeroDesktop} alt="img"/>
+              <img style={{"--i":"1.25s"}} className="hero-img stretch-grow-el" src={imageHeroDesktop} alt="img"/>
           </picture>
            </div>
           </div>

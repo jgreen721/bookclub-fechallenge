@@ -7,12 +7,22 @@
 .bottom-section-col {
   flex: 1;
   position: relative;
+  /* overflow: hidden; */
+}
+
+.bottom-section-col:first-child {
+  overflow: hidden;
 }
 
 .bottom-section-title {
   margin-bottom: 2rem;
   position: relative;
+  transform: translateX(-100vw);
   /* border: 2px solid red; */
+}
+
+.bottom-section-blurb {
+  transform: translateX(100vw);
 }
 
 .club-div {
@@ -31,6 +41,11 @@
   left: -7rem;
   bottom: 2rem;
   z-index: 5;
+  transform: scale(0);
+}
+
+.bottom-section-img {
+  transform: scaleY(0);
 }
 
 @media screen and (max-width: 1050px) {

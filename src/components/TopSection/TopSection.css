@@ -32,7 +32,12 @@
 
 .section-column-content {
   padding: 4rem 0;
+  /* overflow: hidden; */
   /* border: 2px solid red; */
+}
+
+.top-section-title {
+  filter: blur(100px);
 }
 
 .highlight {
@@ -55,11 +60,24 @@
   z-index: 5;
 }
 
+.section-list-items {
+  overflow: hidden;
+  position: relative;
+}
+
 .section-list-item {
   display: flex;
   align-items: center;
   gap: 2rem;
   margin: 1.5rem 0;
+}
+
+.section-list-item:nth-child(even) {
+  transform: translateX(-100rem);
+}
+
+.section-list-item:nth-child(odd) {
+  transform: translateX(100rem);
 }
 
 @media screen and (max-width: 1050px) {

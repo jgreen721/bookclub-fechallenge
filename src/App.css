@@ -1,9 +1,29 @@
 .app {
   max-width: 144rem;
   margin: 0 auto;
-  /* border: 2px solid black; */
   overflow: hidden;
   position: relative;
+  /* border: 2px solid black; */
+}
+
+.inflate-vertically {
+  animation: inflate-vertically 1s var(--i) ease forwards;
+}
+
+@keyframes inflate-vertically {
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.spin-inflate-el {
+  animation: spin-inflate-el 1s var(--i) ease forwards;
+}
+
+@keyframes spin-inflate-el {
+  100% {
+    transform: scale(1) rotate(1080deg);
+  }
 }
 
 .clear-blur {
@@ -29,5 +49,16 @@
   }
   100% {
     transform: scaleY(1) scaleX(1);
+  }
+}
+
+.slide-center-el {
+  animation: slidetocenter 1s var(--i) cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    forwards;
+}
+
+@keyframes slidetocenter {
+  100% {
+    transform: translateX(0);
   }
 }
