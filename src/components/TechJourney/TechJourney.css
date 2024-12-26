@@ -1,6 +1,7 @@
 .tech-journey-section {
   position: relative;
   padding: 0rem var(--mainPaddingX);
+  transform: scaleX(0);
 }
 .tech-journey-content {
   position: relative;

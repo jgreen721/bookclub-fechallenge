@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import { GridOverlay } from '../../ui'
 import { patternArrow } from '../../const'
 import "./TechJourney.css"
@@ -10,8 +10,17 @@ const TechJourney = () => {
     {id:3,title:"Join our discussion forums"},
     {id:4,title:"Attend exclusive meetups"},
   ]
+  const techJourneyRef = useRef();
+  const isVisible = useRef(techJourneyRef);
+
+
+  useEffect(()=>{
+    if(isVisible){
+        techJourneyRef.current.classList.add("inflate-horizontally")
+    }
+  },[isVisible])
   return (
-    <div className="tech-journey-section">
+    <div style={{"--i":".5s"}} ref={techJourneyRef} className="tech-journey-section">
       <div className="tech-journey-content">
       <GridOverlay/>
 
